@@ -18,7 +18,7 @@ $ npm install -g
 ## Using
 
 ```
-$ translate こんばんわ
+$ translate こんばんは
 ```
 
 ```
