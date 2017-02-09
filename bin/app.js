@@ -65,8 +65,17 @@ var translate_type = process.argv[3] || "ja/en"
 
 translate_type = translate_type.split("/");
 
-getAccessToken((token) => {
+if(text == "-h" || text == "--help"){
+  console.log("\nThis is Translate Command Line Tool.\n")
+  console.log("exsample.\n")
+  console.log("translate こんばんわ\n\n")
+  console.log("Default is Japanese to English.\nIf you want to translate into a different language\n")
+  console.log("translate こんばんわ ja/zh-tw")
+  console.log("translate <text> <from language/to language>\n\n\n")
+}else{
+  getAccessToken((token) => {
     translate(token, text,translate_type[0],translate_type[1], (translated) => {
         console.log(translated);
     });
-});
+  });
+}
