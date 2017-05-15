@@ -1,9 +1,14 @@
 package main
 
-import "github.com/konojunya/translate-command/Utils"
+import (
+  "github.com/konojunya/translate-command/Utils"
+  "fmt"
+)
 
 func main() {
 
-	Utils.Translate()
+  text := Utils.Translate("en","ja","hello")
+
+  fmt.Println(text)
 
 }
